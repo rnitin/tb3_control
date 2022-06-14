@@ -1,10 +1,9 @@
-from multiprocessing.connection import wait
 import rospy
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
 import transforms3d as t3d
 import numpy as np
-from utils import RobotAgent, PID, Pose
+from utils import RobotAgent, PID
 from utils import wrap_angle
 
 class TurtleBotAgent(RobotAgent):
