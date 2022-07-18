@@ -21,7 +21,7 @@ class WaypointNav(TurtleBotAgent):
         mode = int(input("Mode (1 - both, 2 - head first): "))
         n_wayp = 5
         wayp = np.array([[0.,0.],[1.,0.],[1.,1.],[0.,1.],[0.,0.]])
-        self.tol= 0.01
+        self.tol= 0.005
 
         for i_wayp in range(n_wayp):
             goal_x = round(wayp[i_wayp,0], 3)
@@ -34,7 +34,7 @@ class WaypointNav(TurtleBotAgent):
             print("All waypoints navigated.")
             self.stop_bot()
             self.orient_bot()
-            log_path = os.path.join(os.getcwd(), 'src/turtlebot_py/logs/')
+            log_path = os.path.join(os.getcwd(), 'src/tb3_control/logs/')
             with open(log_path + 'list_er_lin.pkl', 'wb') as f:
                 pickle.dump(self.list_e_lin, f)
             with open(log_path + 'list_er_ang.pkl', 'wb') as f:

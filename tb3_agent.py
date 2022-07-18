@@ -9,7 +9,8 @@ from utils import wrap_angle
 class TurtleBotAgent(RobotAgent):
     """ class representing a TurtleBot 3 """
     
-    def __init__(self, k=np.array([[0.75, 0., 0.],[1.25, 0., 0.]]), logging=False):
+    def __init__(self, k=np.array([[0.75, 0., 0.],[1.25, 0., 0.]]), \
+    logging=False):
         """ initialize TurtleAgent object """
         self.wait_sub = False # flag to wait for subscriber init
         super(TurtleBotAgent, self).__init__(MAX_V_LIN=0.22, MAX_V_ANG=2.84)

@@ -27,6 +27,6 @@ include_directories(
 #############
 ## Install ##
 #############
-catkin_install_python(PROGRAMS goal.py waypoint.py waypoint_test.py
+catkin_install_python(PROGRAMS goal.py waypoint.py waypoint_test.py reset_bot.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
